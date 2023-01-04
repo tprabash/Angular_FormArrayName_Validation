@@ -9,14 +9,11 @@ import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 export class AppComponent {
   companyForm: FormGroup;
   isSubmitted: boolean;
-  titleAlert: string = 'This field is required';
-  post: any = '';
   phoneRegex: RegExp = /^((3[0-9])|(6[0-9])|(8[1-9])|(9[0-8]))[0-9]{6}$/;
 
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit() {
-    // init form
     this.createForm();
   }
 
@@ -34,12 +31,8 @@ export class AppComponent {
     });
   }
 
-  onSubmit(post, isValid) {
+  onSubmit() {
     this.isSubmitted = true;
-
-    if (!isValid) return;
-
-    this.post = post;
   }
 
   // add new form group to contacts array
