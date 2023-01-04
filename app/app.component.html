@@ -1,8 +1,4 @@
-<form
-  [formGroup]="companyForm"
-  (ngSubmit)="onSubmit(companyForm.value, companyForm.valid)"
-  class="form"
->
+<form [formGroup]="companyForm" (ngSubmit)="onSubmit()" class="form">
   <!-- nested form array with form group -->
   <div formArrayName="contacts">
     <span class="fill-remaining-space">Contacts</span>
