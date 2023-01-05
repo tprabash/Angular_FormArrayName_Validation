@@ -46,10 +46,6 @@ export class AppComponent {
     );
   }
 
-  get emails() {
-    return this.companyForm.get('emails') as FormArray;
-  }
-
   get contacts() {
     return this.companyForm.get('contacts') as FormArray;
   }
